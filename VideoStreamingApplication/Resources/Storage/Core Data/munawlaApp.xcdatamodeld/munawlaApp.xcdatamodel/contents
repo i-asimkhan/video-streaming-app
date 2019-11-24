@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AmazonItem" representedClassName="AmazonItem" syncable="YES" codeGenerationType="class">
+        <attribute name="asinNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bestAmazonSellerRank" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bestSellersRank" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="customerReviews" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemModelNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemRecordSpecification" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productDimensions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shippingWeight" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AmazonItem" positionX="-63" positionY="-18" width="128" height="210"/>
+    </elements>
+</model>
