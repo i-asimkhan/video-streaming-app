@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 19/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** Utility.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -70,7 +70,7 @@ class Utility {
             return mutableDictionary
         }
         else {
-            return JSONObject
+					return JSONObject ?? NSDictionary()
         }
     }
 
@@ -109,7 +109,13 @@ class Utility {
            alertController.addAction(action)
         }
 
-        UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+			let rootViewController =  UIApplication.shared.windows.first!.rootViewController
+
+			rootViewController?.present(alertController, animated: true, completion: nil)
+
+			/*
+			(UIApplication.topViewController() as AnyObject).present(alertController, animated: true, completion: nil)
+			*/
     }
 
 	 static func showCustomToast(titleText : String, descText : String) {
@@ -125,8 +131,8 @@ class Utility {
 
 
 
-		let title = EKProperty.LabelContent(text: titleText, style: .init(font: Fonts.Dubai_Bold!, color: Colors.blue))
-		let description = EKProperty.LabelContent(text: descText, style: .init(font: Fonts.Dubai_Regualr!, color: Colors.blueD))
+		let title = EKProperty.LabelContent(text: titleText, style: .init(font: Fonts.Dubai_Bold!, color: Colors.gray))
+		let description = EKProperty.LabelContent(text: descText, style: .init(font: Fonts.Dubai_Regualr!, color: Colors.gray))
 
 		let simpleMessage = EKSimpleMessage(title: title, description: description)
 		let notificationMessage = EKNotificationMessage(simpleMessage: simpleMessage)

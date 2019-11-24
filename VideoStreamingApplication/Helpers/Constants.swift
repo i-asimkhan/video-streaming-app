@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 19/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** Constants.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -18,15 +18,11 @@ import Foundation
 import UIKit
 
 struct ApiErrorMessage {
-    static let NoNetwork = NSLocalizedString("No internet connection!", comment: "") // -1009, -1005
+    static let NoNetwork = NSLocalizedString("No internet connection!", comment: "")
 }
 
 struct Colors {
-    static let blueD            = UIColor(hex: 0x134ffe)
-    static let blue             = UIColor(hex: 0x2F75F2)
-    static let blueL            = UIColor(hex: 0x2F75F2)
-    static let golden           = UIColor(hex: 0xE09B2C)
-    static let gradient         = [UIColor(hex: 0x5A92F5), blue]
+
     static let gray             = UIColor.gray
     
     static let alternative1     = UIColor(red: 0.9255, green: 0.9373, blue: 0.9451, alpha: 1.0)
@@ -39,10 +35,10 @@ struct Colors {
     static let systemGray       = UIColor.gray
     static let systemLightGray  = UIColor.lightGray
     static let systemDarkGray   = UIColor.darkGray
-    static let systemGroupBG    = UIColor.groupTableViewBackground
+    
 
-		static let DemoViewBgColor    = UIColor(hexString: "#44D9E7")
-		static let NavbarBgColor    = UIColor(hexString: "#44D9E7")
+	static let DemoViewBgColor    = UIColor(named: "#44D9E7")
+	static let NavbarBgColor    = UIColor(named: "#44D9E7")
 		static let NavbarTintColor    = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
 
 		static let HomeViewBgColor    = UIColor.white
@@ -92,7 +88,7 @@ struct APIList {
 
 struct AppConstants {
 
-	static let CORE_DATA_MODEL = "munawlaApp"
+	static let CORE_DATA_MODEL = "VideoStreamingApplication"
 	static let AMAZON_ITEM_RECORD_WISH_LIST = "wish_list"
 	static let AMAZON_ITEM_RECORD_SHIPMENT_LIST = "shipment_list"
 

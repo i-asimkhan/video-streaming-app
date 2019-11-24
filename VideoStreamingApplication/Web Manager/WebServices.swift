@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 18/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** WebServices.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -141,8 +141,8 @@ class WebServices : NSObject {
 
 					do {
 
-						let FULLResponse =
-							try JSONDecoder().decode(loginDC.self, from: response.data!)
+//						let FULLResponse =
+//							try JSONDecoder().decode(loginDC.self, from: response.data!)
 
 					} catch let jsonerror {
 

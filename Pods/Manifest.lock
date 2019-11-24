@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Device (3.2.1)
+  - IQKeyboardManagerSwift (6.5.4)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (3.5.1)
+  - QuickLayout (3.0.0)
+  - ReachabilitySwift (5.0.0)
+  - SDWebImage (5.3.2):
+    - SDWebImage/Core (= 5.3.2)
+  - SDWebImage/Core (5.3.2)
+  - SVProgressHUD (2.2.5)
+  - SwiftEntryKit (1.0.1):
+    - QuickLayout (= 3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireObjectMapper
+  - Device
+  - IQKeyboardManagerSwift
+  - NVActivityIndicatorView
+  - ObjectMapper
+  - ReachabilitySwift
+  - SDWebImage
+  - SVProgressHUD
+  - SwiftEntryKit (= 1.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Device
+    - IQKeyboardManagerSwift
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - QuickLayout
+    - ReachabilitySwift
+    - SDWebImage
+    - SVProgressHUD
+    - SwiftEntryKit
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftEntryKit: 3f55c0b8e676afe24a3703237bcac68372891c56
+
+PODFILE CHECKSUM: dc53ff5cdbae8c021b460e2f96461d759d4f15f4
+
+COCOAPODS: 1.8.3

@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 18/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** NetworkManager.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -31,7 +31,14 @@ class NetworkManager {
     var delegate : NetworkManagerDelegate! 
     func observeReachability(){
         UserDefaults.standard.set(true, forKey: "isFirstConnection")
-        self.reachability = Reachability()
+
+			do {
+					 self.reachability = try Reachability()
+			} catch {
+					print("Unexpected non-vending-machine-related error: \(error)")
+			}
+
+
         NotificationCenter.default.addObserver(self, selector:#selector(self.reachabilityChanged), name: NSNotification.Name(rawValue: "reachabilityChanged"), object: nil)
         do {
             try self.reachability.startNotifier()
@@ -69,13 +76,24 @@ class NetworkManager {
             if !(firstConnectionCheck){
             }
             break
+					case .unavailable:
+            Logger.logInfo(value: "Network is not available.")
+            if delegate != nil{
+                delegate.isNotConnected()
+            }
+            if !(firstConnectionCheck){
+            }
+            break
+
         }
+
+				
         UserDefaults.standard.set(false, forKey: "isFirstConnection")
     }
     
     func isConnected()-> Bool{
 
-			if let reach = reachability , reach.connection != .none {
+			if let reach = reachability , reach.connection != .unavailable {
 
 				return true
 

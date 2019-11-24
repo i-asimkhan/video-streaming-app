@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 17/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
-(** BaseNavView.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+(** BaseNavigationViewController.swift **)
+dev shanghai
+Copyright © 2019 dev shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |

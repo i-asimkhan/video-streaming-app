@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 17/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** BaseViewController.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev shanghai
+Copyright © 2019 dev shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -39,6 +39,8 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 			self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
 		}
 
+	
+
 		func pushViewController(_ viewController: UIViewController, animated: Bool) {
 
 
@@ -67,7 +69,7 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 
 		}
 
-	  func setNavigation(barTintColor : UIColor = Colors.blue, tintColor : UIColor = Colors.systemWhite){
+	func setNavigation(barTintColor : UIColor = Colors.NavbarBgColor ?? UIColor.gray, tintColor : UIColor = Colors.systemWhite){
 
 			self.tabBarController?.tabBar.isHidden = false
 			self.navigationController?.navigationBar.isHidden = false
@@ -100,25 +102,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         
         navView.sizeToFit()
     }
-		/*
-
-    func addBackButton(color: UIColor = .black){
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
-        leftView.backgroundColor = Colors.systemClear
-        
-        let backButtonImg = UIImageView(frame: CGRect(x: 0, y: 10, width: 20, height: 20))
-        backButtonImg.image = #imageLiteral(resourceName: "moveBackward").withRenderingMode(.alwaysTemplate)
-        leftView.addSubview(backButtonImg)
-        
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside)
-        leftView.addSubview(backButtonImg)
-				leftView.addSubview(backButton)
-        
-        backButton.tintColor = UIColor.green
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftView)
-    }
-		*/
 
 		func addBackButton(color: UIColor = .black) {
 			let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
@@ -138,50 +121,9 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 			self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftView)
 		}
     
-    func addMenuButton(color: UIColor = .black) {
 
-        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
-        leftView.backgroundColor = Colors.systemClear
-        
-        let backButtonImg = UIImageView(frame: CGRect(x: 0, y: 10, width: 20, height: 20))
-        //backButtonImg.image = #imageLiteral(resourceName: "barMenuIcon")
-				backButtonImg.image = backButtonImg.image?.withRenderingMode(.alwaysTemplate)
-				backButtonImg.tintColor = color
 
-        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        backButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControl.Event.touchUpInside)
-        
-        leftView.addSubview(backButtonImg)
-        leftView.addSubview(backButton)
-        
-        self.revealViewController().panGestureRecognizer()
-        self.revealViewController().tapGestureRecognizer()
-		self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-		self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftView)
-    }
 
-	func addRightNavItems() {
-
-		let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-		leftView.backgroundColor = Colors.systemClear
-
-		let backButtonImg = UIImageView(frame: CGRect(x: 0, y: 10, width: 20, height: 20))
-		backButtonImg.image = #imageLiteral(resourceName: "Checkbox")
-		backButtonImg.image = backButtonImg.image?.withRenderingMode(.alwaysTemplate)
-		backButtonImg.tintColor = UIColor.red
-
-		let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-
-		leftView.addSubview(backButtonImg)
-		leftView.addSubview(backButton)
-
-		let item = UIBarButtonItem(customView: leftView)
-		item.addBadge(number: 2)
-		self.navigationItem.rightBarButtonItems = [item]
-
-	}
     
     @objc func back() {
         _ = self.navigationController?.popViewController(animated: true)

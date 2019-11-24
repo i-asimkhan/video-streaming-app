@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: dev shanghai on 18/05/2019
+VideoStreamingApplication
+Created by: dev shanghai on 24/11/2019
 
 (** Logger.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
@@ -30,19 +30,19 @@ class Logger {
     
     static func logError(value:Any) {
         #if DEBUG
-            print("munawlaApp - Error -> \(value)")
+            print("VideoStreamingApplication - Error -> \(value)")
         #endif
     }
     
     static func logWarning(value:Any) {
         #if DEBUG
-            print("munawlaApp - Warning -> \(value)")
+            print("VideoStreamingApplication - Warning -> \(value)")
         #endif
     }
     
     static func logInfo(value:Any) {
         #if DEBUG
-            print("munawlaApp - Info -> \(value)")
+            print("VideoStreamingApplication - Info -> \(value)")
         #endif
     }
 }

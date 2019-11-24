@@ -1,11 +1,11 @@
 ///**
 /**
-munawlaApp
-Created by: Shoukat Ullah on 19/05/2019
+VideoStreamingApplication
+Created by: dev_shanghai on 24/11/2019
 
 (** DesignableInput.swift **)
-Shoukat Ullah
-Copyright © 2019 Shoukat Ullah. All rights reserved.
+dev_shanghai
+Copyright © 2019 dev_shanghai. All rights reserved.
 
 +-----------------------------------------------------+
 |                                                     |
