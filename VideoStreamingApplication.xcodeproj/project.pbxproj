@@ -83,7 +83,7 @@
 		FDCAA88C238B044700F128E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDCAA88E238B044900F128E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDCAA891238B044900F128E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FDCAA893238B044900F128E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		FDCAA893238B044900F128E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCAA898238B044900F128E3 /* VideoStreamingApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoStreamingApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCAA89C238B044900F128E3 /* VideoStreamingApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamingApplicationTests.swift; sourceTree = "<group>"; };
 		FDCAA89E238B044900F128E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -873,7 +873,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6WQJMLN73;
 				INFOPLIST_FILE = VideoStreamingApplication/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -893,7 +892,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6WQJMLN73;
 				INFOPLIST_FILE = VideoStreamingApplication/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
