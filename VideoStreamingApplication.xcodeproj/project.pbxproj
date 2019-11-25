@@ -872,7 +872,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6WQJMLN73;
-				INFOPLIST_FILE = VideoStreamingApplication/Info.plist;
+				INFOPLIST_FILE = VideoStreamingApplication/Resources/Plists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -891,7 +892,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6WQJMLN73;
-				INFOPLIST_FILE = VideoStreamingApplication/Info.plist;
+				INFOPLIST_FILE = VideoStreamingApplication/Resources/Plists/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,8 +6,7 @@ Asim Khan
 ### Description
 This is a video streaming application. 
 
-### Dependencies
-# s for All the Targets
+# Dependencies for All the Targets
  'Alamofire', '~> 4.7'
  'SVProgressHUD'
  'Device'
