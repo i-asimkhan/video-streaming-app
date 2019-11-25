@@ -23,7 +23,7 @@ class VideosListRouter: VideosListPresenterToRouterProtocol {
 
 	class func createModule() -> UIViewController {
 
-		let view = AppStoryboard.Features.instance.instantiateViewController(withIdentifier:"VideosListViewController") as! VideosListViewController
+		let view = AppStoryboard.Main.instance.instantiateViewController(withIdentifier:"VideosListViewController") as! VideosListViewController
 		let presenter: VideosListViewToPresenterProtocol & VideosListInterectorToPresenterProtocol = VideosListPresenter();
 		let interactor: VideosListPresentorToInterectorProtocol = VideosListInterector();
 		let router: VideosListPresenterToRouterProtocol = VideosListRouter();
@@ -52,8 +52,6 @@ class VideosListRouter: VideosListPresenterToRouterProtocol {
 		presenter.router = router;
 		presenter.interector = interactor;
 		interactor.presenter = presenter;
-
-		//return presenter
 
 	}
 

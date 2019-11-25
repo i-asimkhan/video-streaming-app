@@ -33,6 +33,8 @@ protocol VideosListViewToPresenterProtocol: class {
 	var view: VideosListPresenterToViewProtocol? {get set};
 	var interector: VideosListPresentorToInterectorProtocol? {get set};
 	var router: VideosListPresenterToRouterProtocol? {get set}
+    
+    func getVideosList();
 
 }
 
@@ -43,6 +45,8 @@ protocol VideosListViewToPresenterProtocol: class {
 // Presenter asks Interector for all the bussiness logic for results
 protocol VideosListPresentorToInterectorProtocol: class {
 	var presenter: VideosListInterectorToPresenterProtocol? {get set};
+    
+    func getVideos()
 }
 
 
@@ -50,6 +54,9 @@ protocol VideosListPresentorToInterectorProtocol: class {
 // Defined in Presenter
 // Presenter is informed about completion of calculations and business logics results are ready.
 protocol VideosListInterectorToPresenterProtocol: class {
+    
+    func returnVideos(videos : [Video])
+    
 }
 
 
@@ -57,4 +64,7 @@ protocol VideosListInterectorToPresenterProtocol: class {
 // Defined in View
 // Now in View we can show the responses of Interector sent by Presenter
 protocol VideosListPresenterToViewProtocol: class {
+    
+    func videosLoadComplete(videos : [Video])
+    
 }

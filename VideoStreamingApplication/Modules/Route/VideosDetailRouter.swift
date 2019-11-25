@@ -22,7 +22,7 @@ class VideoDetailRouter: VideoDetailPresenterToRouterProtocol {
 
 	class func createModule() -> UIViewController {
 
-		let view = AppStoryboard.Features.instance.instantiateViewController(withIdentifier:"VideoDetailViewController") as! VideoDetailViewController
+		let view = AppStoryboard.Main.instance.instantiateViewController(withIdentifier:"VideoDetailViewController") as! VideoDetailViewController
 		let presenter: VideoDetailViewToPresenterProtocol & VideoDetailInterectorToPresenterProtocol = VideoDetailPresenter();
 		let interactor: VideoDetailPresentorToInterectorProtocol = VideoDetailInterector();
 		let router: VideoDetailPresenterToRouterProtocol = VideoDetailRouter();
@@ -53,7 +53,6 @@ class VideoDetailRouter: VideoDetailPresenterToRouterProtocol {
 		presenter.interector = interactor;
 		interactor.presenter = presenter;
 
-		//return presenter
 
 	}
 

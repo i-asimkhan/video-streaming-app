@@ -24,8 +24,8 @@ import Foundation
 enum AppStoryboard : String {
     
     //Add all the storyboard names you wanted to use in your project
-    case Main, Features, LoginRegistration
     
+    case Main
     var instance : UIStoryboard {
         
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)

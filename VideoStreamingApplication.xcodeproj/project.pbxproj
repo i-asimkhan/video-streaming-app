@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1394E174C3784C9D60039602 /* Pods_VideoStreamingApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7CE10DFC6085A6B021FCC7 /* Pods_VideoStreamingApplicationUITests.framework */; };
 		483F1BD636E6348A34A79B3A /* Pods_VideoStreamingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CAE49E5B8A5F16F3739678 /* Pods_VideoStreamingApplicationTests.framework */; };
+		A2F93B4F238C642300DFDE87 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F93B4E238C642300DFDE87 /* VideoTableViewCell.swift */; };
 		EB2603AD3210C547CC6C0A1B /* Pods_VideoStreamingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA673D9BB85A6AE7CB812EFF /* Pods_VideoStreamingApplication.framework */; };
 		FD3006C1238BCF0500987770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FD3006C0238BCF0400987770 /* README.md */; };
 		FDCAA886238B044700F128E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA885238B044700F128E3 /* AppDelegate.swift */; };
@@ -71,6 +72,7 @@
 		0665ECF07F3D90EAD3E80473 /* Pods-VideoStreamingApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplication.debug.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplication/Pods-VideoStreamingApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		4D578EDBE52E5E8D6467D36F /* Pods-VideoStreamingApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplicationTests/Pods-VideoStreamingApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69CAE49E5B8A5F16F3739678 /* Pods_VideoStreamingApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoStreamingApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F93B4E238C642300DFDE87 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		AA673D9BB85A6AE7CB812EFF /* Pods_VideoStreamingApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoStreamingApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E4DAB8E235A53681D867BD /* Pods-VideoStreamingApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplicationUITests/Pods-VideoStreamingApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D43FDD81C4A4F9C61AE51716 /* Pods-VideoStreamingApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplicationUITests/Pods-VideoStreamingApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,32 @@
 				FE7CE10DFC6085A6B021FCC7 /* Pods_VideoStreamingApplicationUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A21FFB0B238C243B00033D6D /* Videos List */ = {
+			isa = PBXGroup;
+			children = (
+				FDCAA940238B2AD900F128E3 /* VideosListViewController.swift */,
+				A2F93B4E238C642300DFDE87 /* VideoTableViewCell.swift */,
+			);
+			path = "Videos List";
+			sourceTree = "<group>";
+		};
+		A21FFB0C238C244F00033D6D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FDCAA93C238B18EF00F128E3 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A21FFB0D238C246100033D6D /* Video Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FDCAA942238B2E9300F128E3 /* BaseNavigationController.swift */,
+				FDCAA930238B176700F128E3 /* VideoDetailViewController.swift */,
+			);
+			path = "Video Detail";
 			sourceTree = "<group>";
 		};
 		D1DD49F0F7509BD8130C79C4 /* Pods */ = {
@@ -425,10 +453,9 @@
 		FDCAA921238B151A00F128E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FDCAA930238B176700F128E3 /* VideoDetailViewController.swift */,
-				FDCAA940238B2AD900F128E3 /* VideosListViewController.swift */,
-				FDCAA942238B2E9300F128E3 /* BaseNavigationController.swift */,
-				FDCAA93C238B18EF00F128E3 /* BaseViewController.swift */,
+				A21FFB0D238C246100033D6D /* Video Detail */,
+				A21FFB0C238C244F00033D6D /* Base */,
+				A21FFB0B238C243B00033D6D /* Videos List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -689,6 +716,7 @@
 				FDCAA908238B0EAA00F128E3 /* Utility.swift in Sources */,
 				FDCAA937238B179600F128E3 /* VideoDetailPresenter.swift in Sources */,
 				FDCAA90A238B0EE400F128E3 /* AppStateManager.swift in Sources */,
+				A2F93B4F238C642300DFDE87 /* VideoTableViewCell.swift in Sources */,
 				FDCAA8F7238B0A7F00F128E3 /* Validation.swift in Sources */,
 				FDCAA92B238B163100F128E3 /* VideosListInteractor.swift in Sources */,
 				FDCAA943238B2E9300F128E3 /* BaseNavigationController.swift in Sources */,
