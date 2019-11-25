@@ -10,6 +10,7 @@
 		1394E174C3784C9D60039602 /* Pods_VideoStreamingApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7CE10DFC6085A6B021FCC7 /* Pods_VideoStreamingApplicationUITests.framework */; };
 		483F1BD636E6348A34A79B3A /* Pods_VideoStreamingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69CAE49E5B8A5F16F3739678 /* Pods_VideoStreamingApplicationTests.framework */; };
 		EB2603AD3210C547CC6C0A1B /* Pods_VideoStreamingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA673D9BB85A6AE7CB812EFF /* Pods_VideoStreamingApplication.framework */; };
+		FD3006C1238BCF0500987770 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FD3006C0238BCF0400987770 /* README.md */; };
 		FDCAA886238B044700F128E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA885238B044700F128E3 /* AppDelegate.swift */; };
 		FDCAA888238B044700F128E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAA887238B044700F128E3 /* SceneDelegate.swift */; };
 		FDCAA88D238B044700F128E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCAA88B238B044700F128E3 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		D43FDD81C4A4F9C61AE51716 /* Pods-VideoStreamingApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplicationUITests/Pods-VideoStreamingApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D59B2914936077CCB7A9AC81 /* Pods-VideoStreamingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplicationTests/Pods-VideoStreamingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
 		E1DB7696CAFC9049532A5AED /* Pods-VideoStreamingApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoStreamingApplication.release.xcconfig"; path = "Target Support Files/Pods-VideoStreamingApplication/Pods-VideoStreamingApplication.release.xcconfig"; sourceTree = "<group>"; };
+		FD3006C0238BCF0400987770 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FDCAA882238B044700F128E3 /* VideoStreamingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCAA885238B044700F128E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCAA887238B044700F128E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		FDCAA879238B044700F128E3 = {
 			isa = PBXGroup;
 			children = (
+				FD3006C0238BCF0400987770 /* README.md */,
 				FDCAA884238B044700F128E3 /* VideoStreamingApplication */,
 				FDCAA89B238B044900F128E3 /* VideoStreamingApplicationTests */,
 				FDCAA8A6238B044900F128E3 /* VideoStreamingApplicationUITests */,
@@ -554,6 +557,7 @@
 				FDCAA8E6238B08D400F128E3 /* Dubai-Bold.ttf in Resources */,
 				FDCAA8E5238B08D400F128E3 /* Dubai-Medium.ttf in Resources */,
 				FDCAA8E7238B08D400F128E3 /* Dubai-Regular.ttf in Resources */,
+				FD3006C1238BCF0500987770 /* README.md in Resources */,
 				FDCAA8E8238B08D400F128E3 /* Dubai-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
