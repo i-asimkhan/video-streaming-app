@@ -145,18 +145,37 @@ class Utility {
     
     // create thumbnail image for the video
     static func createThumbnailImage(forUrl url: URL) -> UIImage? {
-        let asset: AVAsset = AVAsset(url: url)
-        let imageGenerator = AVAssetImageGenerator(asset: asset)
+//        let asset: AVAsset = AVAsset(url: url)
+//        let imageGenerator = AVAssetImageGenerator(asset: asset)
+//
+//        do {
+//            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
+//            return UIImage(cgImage: thumbnailImage)
+//        } catch let error {
+//            print(error)
+//        }
+//
+//        return nil
 
-        do {
-            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
-            return UIImage(cgImage: thumbnailImage)
-        } catch let error {
-            print(error)
-        }
+			let asset = AVAsset(url: url)
+			let assetImgGenerate = AVAssetImageGenerator(asset: asset)
+			assetImgGenerate.appliesPreferredTrackTransform = true
+			assetImgGenerate.maximumSize = CGSize(width: 300, height: 300)
 
-        return nil
+			let time = CMTimeMakeWithSeconds(0.0, preferredTimescale: 600)
+			do {
+					let img = try assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+					let thumbnail = UIImage(cgImage: img)
+					return thumbnail
+			}
+			catch {
+				print(error.localizedDescription)
+				return nil
+			}
+
     }
+
+	
     
     
 }
