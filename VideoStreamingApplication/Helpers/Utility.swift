@@ -145,17 +145,6 @@ class Utility {
     
     // create thumbnail image for the video
     static func createThumbnailImage(forUrl url: URL) -> UIImage? {
-//        let asset: AVAsset = AVAsset(url: url)
-//        let imageGenerator = AVAssetImageGenerator(asset: asset)
-//
-//        do {
-//            let thumbnailImage = try imageGenerator.copyCGImage(at: CMTimeMake(value: 1, timescale: 60) , actualTime: nil)
-//            return UIImage(cgImage: thumbnailImage)
-//        } catch let error {
-//            print(error)
-//        }
-//
-//        return nil
 
 			let asset = AVAsset(url: url)
 			let assetImgGenerate = AVAssetImageGenerator(asset: asset)

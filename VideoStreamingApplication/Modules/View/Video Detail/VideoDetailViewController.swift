@@ -74,7 +74,7 @@ class VideoDetailViewController: BaseViewController {
 	override func viewDidLoad() {
 
 		super.viewDidLoad()
-		VideoDetailRouter.createRoute(viewObj: self)
+		
         
         self.videoThumbnailImage.image = self.selectedVideo?.thumbnailImage
         self.videoTitleLabel.text = self.selectedVideo?.title
@@ -113,13 +113,11 @@ class VideoDetailViewController: BaseViewController {
         
         playerLayer.frame = videoView.bounds
         videosThumbnailOverlay.frame = CGRect(x: 0, y: videoView.bounds.height - 50, width: videoView.bounds.width - 10, height: 50)
-        
-        if isFullScreen {
-            playerLayer.videoGravity = .resizeAspectFill
-        } else {
-            playerLayer.videoGravity = .resize
-        }
-        
+          if isFullScreen {
+              playerLayer.videoGravity = .resizeAspectFill
+          } else {
+              playerLayer.videoGravity = .resize
+          }
         
     }
     
@@ -252,7 +250,11 @@ extension VideoDetailViewController {
         player.currentItem?.addObserver(self, forKeyPath: "duration", options: [.new, .initial], context: nil)
         addTimeObserver()
         playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = .resize
+          if isFullScreen {
+              playerLayer.videoGravity = .resizeAspectFill
+          } else {
+              playerLayer.videoGravity = .resize
+          }
         
         videoView.layer.addSublayer(playerLayer)
         
@@ -302,7 +304,7 @@ extension VideoDetailViewController {
     func restartPlayer() {
         if let observer = self.playerTimeObserver {
             
-            self.selectedVideo = allVides![selectedIndex!]
+            selectedVideo = allVides![selectedIndex!]
             self.player.removeTimeObserver(observer)
             player.pause()
             player = nil

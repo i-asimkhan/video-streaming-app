@@ -149,7 +149,7 @@
                                                                 </connections>
                                                             </slider>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5w-64-kml">
-                                                                <rect key="frame" x="8" y="-10" width="55" height="20.5"/>
+                                                                <rect key="frame" x="8" y="-7" width="55" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="55" id="oq6-X1-aSW"/>
                                                                 </constraints>
@@ -158,7 +158,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbv-0S-8qg">
-                                                                <rect key="frame" x="351" y="-10" width="55" height="20.5"/>
+                                                                <rect key="frame" x="351" y="-7" width="55" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="55" id="bJ5-XA-Ftv"/>
                                                                 </constraints>
@@ -270,13 +270,13 @@
                                 <rect key="frame" x="0.0" y="288" width="414" height="574"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3O-Ye-WPy">
-                                        <rect key="frame" x="10" y="20" width="394" height="29"/>
+                                        <rect key="frame" x="10" y="20" width="394" height="20"/>
                                         <fontDescription key="fontDescription" name="Dubai-Medium" family="Dubai" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeO-3V-XYs">
-                                        <rect key="frame" x="10" y="69" width="394" height="115"/>
+                                        <rect key="frame" x="10" y="60" width="394" height="79.5"/>
                                         <string key="text">This is the description of the video. This is the description of the video. This is the description of the video. This is the description of the video. This is the description of the video. </string>
                                         <fontDescription key="fontDescription" name="Dubai-Light" family="Dubai" pointSize="17"/>
                                         <color key="textColor" name="textColor"/>

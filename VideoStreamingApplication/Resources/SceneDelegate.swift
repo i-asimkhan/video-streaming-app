@@ -26,8 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
 		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-		// guard let _ = (scene as? UIWindowScene) else { return }
         
         print("Scene willConnectTo.")
         let videosListViewController = VideosListRouter.createModule() as! VideosListViewController
@@ -38,14 +36,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigation = UINavigationController(rootViewController: videosListViewController)
         
-        // let navigation = UINavigationController(rootViewController: viewsListViewController)
-        //
-        //
-        //        let window = UIWindow(frame: frame)
-            
-        // Set this scene's window's background color.
-        //self.window!.backgroundColor = UIColor.red
-        
         // Create a ViewController object and set it as the scene's window's root view controller.
         self.window!.rootViewController = navigation
         
@@ -53,20 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window!.makeKeyAndVisible()
         
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        
-        
-         
-         
-         
-        
-         // let navigation = UINavigationController(rootViewController: viewsListViewController)
-
-//         let frame = UIScreen.main.bounds
-//         let window = UIWindow(frame: frame)
-//
-//         window.rootViewController = viewsListViewController
-//         window.makeKeyAndVisible()
 
 
 

@@ -129,6 +129,8 @@ extension VideosListViewController : UITableViewDelegate , UITableViewDataSource
         videoDetailView.selectedVideo = self.videos[sender.tag]
         videoDetailView.allVides = self.videos
         videoDetailView.selectedIndex = sender.tag
+    
+        
         self.navigationController?.pushViewController(videoDetailView, animated: true)
         
 
