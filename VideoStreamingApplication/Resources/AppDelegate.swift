@@ -24,18 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-        let viewsListViewController = VideosListRouter.createModule() as! VideosListViewController
-        
-        
-        
-       
-//        let navigation = UINavigationController(rootViewController: viewsListViewController)
-
-        let frame = UIScreen.main.bounds
-        let window = UIWindow(frame: frame)
-
-        window.rootViewController = viewsListViewController
-        window.makeKeyAndVisible()
         
 		return true
 	}

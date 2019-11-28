@@ -176,6 +176,7 @@
 		A21FFB0C238C244F00033D6D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FDCAA942238B2E9300F128E3 /* BaseNavigationController.swift */,
 				FDCAA93C238B18EF00F128E3 /* BaseViewController.swift */,
 			);
 			path = Base;
@@ -184,7 +185,6 @@
 		A21FFB0D238C246100033D6D /* Video Detail */ = {
 			isa = PBXGroup;
 			children = (
-				FDCAA942238B2E9300F128E3 /* BaseNavigationController.swift */,
 				FDCAA930238B176700F128E3 /* VideoDetailViewController.swift */,
 			);
 			path = "Video Detail";

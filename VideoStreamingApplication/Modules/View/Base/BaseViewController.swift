@@ -35,66 +35,70 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         self.setNeedsStatusBarAppearanceUpdate()
     }
 
-		override func viewDidDisappear(_ animated: Bool) {
-			self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-		}
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
 
 	
 
-		func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    func pushViewController(_ viewController: UIViewController, animated: Bool) {
 
 
-			self.dismiss(animated: true, completion: nil)
-			self.pushViewController(viewController, animated: true)
-			self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.dismiss(animated: true, completion: nil)
+        self.pushViewController(viewController, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 
-		}
+    }
 
     func setNavigation(){
 
-			self.tabBarController?.tabBar.isHidden = false
-			self.navigationController?.navigationBar.isHidden = false
-			self.navigationController?.navigationBar.barTintColor = Colors.HomeViewBgColor
-			self.navigationController?.navigationBar.tintColor = Colors.systemWhite
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = Colors.HomeViewBgColor
+        self.navigationController?.navigationBar.tintColor = Colors.systemWhite
 
-			//addAppLogo()
+        //addAppLogo()
     }
 
-		func resetNavigation() {
+    func resetNavigation() {
 
-			self.tabBarController?.tabBar.isHidden = false
-			self.navigationController?.navigationBar.isHidden = false
-			self.navigationController?.navigationBar.barTintColor = Colors.HomeViewBgColor
-			self.navigationController?.navigationBar.tintColor = Colors.systemWhite
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = Colors.HomeViewBgColor
+        self.navigationController?.navigationBar.tintColor = Colors.systemWhite
 
-		}
+    }
 
 	func setNavigation(barTintColor : UIColor = Colors.NavbarBgColor ?? UIColor.gray, tintColor : UIColor = Colors.systemWhite){
 
-			self.tabBarController?.tabBar.isHidden = false
-			self.navigationController?.navigationBar.isHidden = false
-			self.navigationController?.navigationBar.barTintColor = barTintColor
-			self.navigationController?.navigationBar.tintColor = Colors.systemWhite
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = barTintColor
+        self.navigationController?.navigationBar.tintColor = Colors.systemWhite
 
-			//addAppLogo()
-		}
+			
+    }
 
-		func makeFullScreen() {
+    func makeFullScreen() {
 
-			self.tabBarController?.tabBar.isHidden = true
-			self.navigationController?.navigationBar.isHidden = true
-		}
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
-    func addAppLogo(){
+    func addAppLogo( value : String){
         let navView = UIView()
         
-        let image = UIImageView()
-        image.image = UIImage(named: "munawlaLogo")
+        let appHeader = UILabel()
+         
         
-        image.frame = CGRect(x: 0, y: 0, width: 75, height: 30)
-        image.center = navView.center
-        image.contentMode = UIView.ContentMode.scaleAspectFit
-        navView.addSubview(image)
+        appHeader.frame = CGRect(x: 0, y: 0, width: 125, height: 30)
+        appHeader.center = navView.center
+        appHeader.contentMode = UIView.ContentMode.scaleAspectFit
+        appHeader.text = value
+        appHeader.textColor = getIconColor()
+        appHeader.textAlignment = .center
+        
+        navView.addSubview(appHeader)
         
         navigationItem.titleView = navView
         navigationController?.navigationBar.barStyle = .default
@@ -103,23 +107,27 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         navView.sizeToFit()
     }
 
-		func addBackButton(color: UIColor = .black) {
-			let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
-			leftView.backgroundColor = Colors.systemClear
+    func addBackButton() {
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 120, height: 40))
+        leftView.backgroundColor = Colors.systemClear
 
-			let backButtonImg = UIImageView(frame: CGRect(x: 0, y: 10, width: 20, height: 20))
-			backButtonImg.image = #imageLiteral(resourceName: "moveBackward")
-			backButtonImg.image = backButtonImg.image?.withRenderingMode(.alwaysTemplate)
-			backButtonImg.tintColor = color
+        let backButtonImg = UIImageView(frame: CGRect(x: 0, y: 10, width: 20, height: 20))
+        backButtonImg.image = #imageLiteral(resourceName: "moveBackward")
+        backButtonImg.image = backButtonImg.image?.withRenderingMode(.alwaysTemplate)
+        
+       
+        
+        backButtonImg.tintColor = getIconColor()
+        
 
-			let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-			backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside)
+        let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        backButton.addTarget(self, action: #selector(back), for: UIControl.Event.touchUpInside)
 
-			leftView.addSubview(backButtonImg)
-			leftView.addSubview(backButton)
+        leftView.addSubview(backButtonImg)
+        leftView.addSubview(backButton)
 
-			self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftView)
-		}
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftView)
+    }
     
 
 
@@ -127,6 +135,21 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @objc func back() {
         _ = self.navigationController?.popViewController(animated: true)
+    }
+    
+    func getIconColor () -> UIColor {
+        let dynamicColor = UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                       switch traitCollection.userInterfaceStyle {
+                       case
+                         .unspecified,
+                         .light: return .black
+                       case .dark: return .white
+                    default: return .white
+                        
+            }
+                   }
+        
+        return dynamicColor
     }
 }
 

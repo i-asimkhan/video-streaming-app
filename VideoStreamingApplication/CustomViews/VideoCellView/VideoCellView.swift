@@ -19,14 +19,12 @@ import UIKit
 
 class VideoCellView: UITableViewCell {
 
-	@IBOutlet weak var lblPostCreator: UILabel!
-	@IBOutlet weak var lblUniversityName: UILabel!
-	@IBOutlet weak var lblPostTime: UILabel!
-	@IBOutlet weak var lblPostText: UILabel!
-	@IBOutlet weak var btnReadmore: UIButton!
-	
+
+	@IBOutlet weak var btnVideoDetails: UIButton!
 	@IBOutlet weak var videoImage: UIImageView!
-	
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code

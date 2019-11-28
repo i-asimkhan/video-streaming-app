@@ -37,12 +37,12 @@ extension VideosListInterector : VideosListPresentorToInterectorProtocol {
         if let url = URL(string: videoURLString) {
             var image : UIImage = UIImage()
             
-            if let thumbnailImage = Utility.createThumbnailImage(forUrl: url) {
+            if let thumbnailImage = UIImage(named: "cycling") {
                 image = thumbnailImage
             }
             
             
-            let remoteVideo = Video(url: url, thumbImage: image, title: "Video 1", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!")
+            let remoteVideo = Video(url: url, thumbImage: image, title: "Cycling", subtitle: "we will show cycling in this.", desc: "Description is here. ")
             videos.append(remoteVideo)
         }
         
@@ -53,12 +53,12 @@ extension VideosListInterector : VideosListPresentorToInterectorProtocol {
             
             var image : UIImage = UIImage()
             
-            if let thumbnailImage = Utility.createThumbnailImage(forUrl: url) {
+            if let thumbnailImage = UIImage(named: "snow_mountain") {
                 image = thumbnailImage
             }
             
             
-            let remoteVideo = Video(url: url, thumbImage: image, title: "Video 2", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!")
+            let remoteVideo = Video(url: url, thumbImage: image, title: "Snow Mountain", subtitle: "we will show snow on the mountains.", desc: "Description is here. ")
             videos.append(remoteVideo)
         }
         
@@ -70,29 +70,26 @@ extension VideosListInterector : VideosListPresentorToInterectorProtocol {
             
             var image : UIImage = UIImage()
             
-            if let thumbnailImage = Utility.createThumbnailImage(forUrl: url) {
+            if let thumbnailImage = UIImage(named: "group_discussion") {
                 image = thumbnailImage
             }
             
-            let remoteVideo = Video(url: url, thumbImage: image, title: "Video 3", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!")
+            let remoteVideo = Video(url: url, thumbImage: image, title: "Group Discussion", subtitle: "how people discuss in groups.", desc: "Description is here. ")
             videos.append(remoteVideo)
         }
         
-        // third video
+        // fourth video
         videoURLString = "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
         if let url = URL(string: videoURLString) {
             var image : UIImage = UIImage()
             
-            if let thumbnailImage = Utility.createThumbnailImage(forUrl: url) {
+            if let thumbnailImage = UIImage(named: "people_life") {
                 image = thumbnailImage
             }
             
-            let remoteVideo = Video(url: url, thumbImage: image, title: "Video 4", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!")
+            let remoteVideo = Video(url: url, thumbImage: image, title: "Life of People", subtitle: "how people live" , desc: "Description is here. ")
             videos.append(remoteVideo)
         }
-        
-        
-        
         
         self.presenter?.returnVideos(videos: videos)
     }

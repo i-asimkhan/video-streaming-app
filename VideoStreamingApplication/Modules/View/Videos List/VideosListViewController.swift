@@ -37,13 +37,12 @@ class VideosListViewController: BaseViewController {
 
 		videos = [];
 		// Cell registration from the nib
-			let cellNib = UINib.init(nibName: "VideoCellView", bundle: Bundle.main)
-			self.videosTableView.register(cellNib, forCellReuseIdentifier: "VideoCellView")
+        let cellNib = UINib.init(nibName: "VideoCellView", bundle: Bundle.main)
+        self.videosTableView.register(cellNib, forCellReuseIdentifier: "VideoCellView")
 
 
 		self.videosTableView.delegate = self;
 		self.videosTableView.dataSource = self;
-		self.view.backgroundColor = UIColor.black
 
 	}
 
@@ -58,16 +57,13 @@ class VideosListViewController: BaseViewController {
 	override func viewDidAppear(_ animated: Bool) {
 
 		super.viewDidAppear(true)
-		DispatchQueue.global(qos: .userInitiated).async {
-			// request for videos
-			self.presenter?.getVideosList()
-		}
-
+        self.presenter?.getVideosList()
 
 	}
 
 	override func setNavigation() {
 
+        addAppLogo(value: "Videos List")
 
 	}
 
@@ -77,7 +73,7 @@ class VideosListViewController: BaseViewController {
 extension VideosListViewController : VideosListPresenterToViewProtocol {
     func videosLoadComplete(videos: [Video]) {
 
-			self.view.backgroundColor = UIColor.white
+			
 
         // now we can show the videos
         self.videos = videos;
@@ -106,14 +102,20 @@ extension VideosListViewController : UITableViewDelegate , UITableViewDataSource
 
 		let customCell = tableView.dequeueReusableCell(withIdentifier: "VideoCellView") as! VideoCellView
 
-		customCell.lblPostCreator.text = "Asim Khan "
-		customCell.lblPostTime.text = "01:23 pm"
-		customCell.lblUniversityName.text = "University of Sharjah"
-		customCell.lblPostText.text = "Hi this is Asim \nI would like to sale my iPhone 7."
 
-		customCell.btnReadmore.tag = indexPath.row
-		customCell.btnReadmore.addTarget(self, action: #selector(didTapReadMoreButton(sender:)), for: UIControl.Event.touchUpInside)
-		customCell.videoImage.image = videos[indexPath.row].thumbnailImage
+		
+        customCell.titleLabel.text = videos[indexPath.row].title
+        customCell.descLabel.text =  videos[indexPath.row].subtitle
+        
+        
+        
+        
+
+        customCell.videoImage.image = videos[indexPath.row].thumbnailImage
+        
+        
+        customCell.btnVideoDetails.tag = indexPath.row
+        customCell.btnVideoDetails.addTarget(self, action:#selector(didTapReadDetailsButton), for: .touchUpInside)
 		
 
 
@@ -121,15 +123,20 @@ extension VideosListViewController : UITableViewDelegate , UITableViewDataSource
 
 	}
 
-	@objc func didTapReadMoreButton(sender: UIButton) {
+	@objc func didTapReadDetailsButton(sender: UIButton) {
 
-
+        let videoDetailView = VideoDetailRouter.createModule() as! VideoDetailViewController
+        videoDetailView.selectedVideo = self.videos[sender.tag]
+        videoDetailView.allVides = self.videos
+        videoDetailView.selectedIndex = sender.tag
+        self.navigationController?.pushViewController(videoDetailView, animated: true)
+        
 
 	}
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
-		return 300.0
+        return 220.0
 	}
 
 

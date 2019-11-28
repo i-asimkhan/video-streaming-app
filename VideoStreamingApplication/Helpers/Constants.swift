@@ -37,69 +37,45 @@ struct Colors {
     static let systemDarkGray   = UIColor.darkGray
     
 
-	static let DemoViewBgColor    = UIColor(named: "#44D9E7")
-	static let NavbarBgColor    = UIColor(named: "#44D9E7")
-		static let NavbarTintColor    = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+    static let DemoViewBgColor    = UIColor(named: "#44D9E7")
+    static let NavbarBgColor    = UIColor(named: "#44D9E7")
+    static let NavbarTintColor    = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
 
-		static let HomeViewBgColor    = UIColor.white
+    static let HomeViewBgColor    = UIColor.white
 
 }
 
 struct Fonts {
 
-	static let Dubai_Bold      = UIFont(name: "Dubai-Bold", size: 21)
-	static let Dubai_Light      = UIFont(name: "Dubai-Light", size: 17)
-	static let Dubai_Medium      = UIFont(name: "Dubai-Medium", size: 17)
-	static let Dubai_Regualr      = UIFont(name: "Dubai-Regular", size: 17)
+    static let Dubai_Bold      = UIFont(name: "Dubai-Bold", size: 21)
+    static let Dubai_Light      = UIFont(name: "Dubai-Light", size: 17)
+    static let Dubai_Medium      = UIFont(name: "Dubai-Medium", size: 17)
+    static let Dubai_Regualr      = UIFont(name: "Dubai-Regular", size: 17)
 
 
 }
 
-struct AppURls {    
-    fileprivate static let url          = "http://munawla-admin.com"
+struct AppURls {
+    fileprivate static let url          = ""
     static let base                     = url + "/api/"
 
-
-
-    static let profileImages            = url + "/public/user_images/"
-    static let filterImages             = url + "/public/app_filter_images/"
-    static let awardImages              = url + "/public/awards_image/"
-    static let postFiles                = url + "/public/post_files/"
-    static let advertisements           = url + "/public/advertisments/"
-    static let promoVideo               = url + "/public/promo_video/"
-    static let contestFiles             = url + "/public/contest_files/"
-    
-    static let productImage             = url + "/public/mystore/product_image/"
-    static let categoryImages           = url + "/public/mystore/category_image/"
 }
 
 
 struct APIList {
 
-	static let loginAPI          = "login/loginuser/"
-	static let registerAPI       = "login/registerUser/"
-	static let sendConfirmationAPI       = "Two_way_verification/sendConformationCode/"
-	static let loadProfile       = "profile/getprofiledetails/"
-	static let updateProfile       = "login/changepassword/"
-
-	static let getItemDetailsbyASIN = "Get_data_from_amazon/getDetailByAsian/"
 
 }
 
 struct AppConstants {
-
-	static let CORE_DATA_MODEL = "VideoStreamingApplication"
-	static let AMAZON_ITEM_RECORD_WISH_LIST = "wish_list"
-	static let AMAZON_ITEM_RECORD_SHIPMENT_LIST = "shipment_list"
-
 
 }
 
 
 struct AppLanguages {
 
-	static let ENGLISH          = "en"
-	static let ARABIC           = "ar"
+    static let ENGLISH          = "en"
+    static let ARABIC           = "ar"
 
 
 }

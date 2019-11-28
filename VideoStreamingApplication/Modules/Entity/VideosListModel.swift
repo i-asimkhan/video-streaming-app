@@ -25,12 +25,15 @@ let url: URL
 let thumbnailImage: UIImage
 let title: String
 let subtitle: String
+let videoDescription : String
 
-init(url: URL, thumbImage: UIImage, title: String, subtitle: String) {
+init(url: URL, thumbImage: UIImage, title: String, subtitle: String, desc: String) {
 	self.url = url
 	self.thumbnailImage = thumbImage
 	self.title = title
 	self.subtitle = subtitle
+    self.videoDescription = desc
+    
 	super.init()
     }
 }

@@ -170,7 +170,7 @@ class Utility {
 			}
 			catch {
 				print(error.localizedDescription)
-				return nil
+				return UIImage(named: "down_arrow")
 			}
 
     }
